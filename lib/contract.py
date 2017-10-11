@@ -115,7 +115,7 @@ def get_users():
 	response = post(NOT_AUTH_REQUEST,requrl, bytes(json.dumps(data), 'utf-8'),{'Content-Type':r'application/json'})
 	res = response.decode('utf-8')
 	json_result = json.loads(res)
-	print ("getusers", unpack_ret(json_result["Ret"], 'getUsers'))
+	print ("getusers", json_result["Ret"])
 
 def unpack_ret(ret,method):
 	url = "http://127.0.0.1:8080/unpack"
