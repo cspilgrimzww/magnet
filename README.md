@@ -21,11 +21,11 @@ source venv/bin/activate
 ### install requirements
 
 ```sh
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ### run
 
 ```sh
-python main.py
+python3 main.py
 ```
