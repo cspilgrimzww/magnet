@@ -1,0 +1,24 @@
+{% extends "layout.html"%}
+{% block navbar %}
+
+          <ul class="nav navbar-nav">
+            <li><a href="#">Main</a></li>
+            <li class="active"><a href="{{url_for('accounts')}}">Accounts</a></li>
+            <li><a href="{{url_for('evidence')}}">Evidence</a></li>
+          </ul>
+{% endblock %}
+{% block content%}
+<table class="table">
+	<tr>
+		<th>address</th>
+		<th>files</th>
+	</tr>
+	{% for item in accounts %}
+	<tr> 
+		<td>{{item.address}}</td>
+		<td>{{item.count}}</td>
+	</tr>
+
+	{% endfor %}
+</table>
+{% endblock %}
